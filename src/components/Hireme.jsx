@@ -80,6 +80,7 @@ const Hireme = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };

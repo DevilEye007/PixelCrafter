@@ -86,7 +86,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="px-6 transform transition-transform duration-300 hover:scale-110 hover:text-[#FF6F00]"
               >
-                <a href={menu.link}>{menu.name}</a>
+                <a className="font-bold" href={menu.link}>{menu.name}</a>
               </li>
             ))}
           </ul>
