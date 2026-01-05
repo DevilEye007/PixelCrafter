@@ -40,7 +40,7 @@ const Navbar = () => {
           </h4>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu with BOLD LINKS */}
         <div
           className={`${
             sticky ? "md:bg-white/0 bg-white" : "bg-white"
@@ -52,7 +52,12 @@ const Navbar = () => {
                 key={i}
                 className="px-6 transform transition-transform duration-300 hover:scale-110 hover:text-[#FF6F00]"
               >
-                <a href={menu.link}>{menu.name}</a>
+                <a 
+                  href={menu.link} 
+                  className="font-bold hover:font-extrabold transition-all duration-300"
+                >
+                  {menu.name}
+                </a>
               </li>
             ))}
           </ul>
@@ -68,7 +73,7 @@ const Navbar = () => {
           <ion-icon name={open ? "close" : "menu"}></ion-icon>
         </div>
 
-        {/* Mobile Menu with 3D Animation */}
+        {/* Mobile Menu with 3D Animation - BOLD LINKS */}
         <div
           className={`md:hidden text-gray-900 absolute w-2/3 h-screen px-7 py-2 font-medium bg-white top-0 shadow-2xl transform-gpu origin-right transition-all duration-700 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]`}
           style={{
@@ -86,7 +91,12 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="px-6 transform transition-transform duration-300 hover:scale-110 hover:text-[#FF6F00]"
               >
-                <a className="font-bold" href={menu.link}>{menu.name}</a>
+                <a 
+                  className="font-extrabold text-xl uppercase tracking-wider" 
+                  href={menu.link}
+                >
+                  {menu.name}
+                </a>
               </li>
             ))}
           </ul>
